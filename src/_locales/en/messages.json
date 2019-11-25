@@ -10,8 +10,8 @@
   },
 
   "menuItemSHA1": {
-    "message": "SHA-1",
-    "description": "Get SHA-1 hash of selected content"
+    "message": "SHA-1 (insecure)",
+    "description": "Get SHA-1 hash (not cryptographically secure) of selected content"
   },
 
   "menuItemSHA256": {
