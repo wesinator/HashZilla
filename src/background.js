@@ -31,7 +31,7 @@ browser.menus.create({
 
 browser.menus.create({
   id: "md5",
-  title: browser.i18n.getMessage("menuItemMD5"),
+  title: browser.i18n.getMessage("MD5"),
   contexts: ["all"]
 }, onCreated);
 
@@ -43,19 +43,19 @@ browser.menus.create({
 
 browser.menus.create({
   id: "sha1",
-  title: browser.i18n.getMessage("menuItemSHA1"),
+  title: browser.i18n.getMessage("SHA1"),
   contexts: ["all"]
 }, onCreated);
 
 browser.menus.create({
   id: "sha256",
-  title: browser.i18n.getMessage("menuItemSHA256"),
+  title: browser.i18n.getMessage("SHA256"),
   contexts: ["all"]
 }, onCreated);
 
 browser.menus.create({
   id: "sha512",
-  title: browser.i18n.getMessage("menuItemSHA512"),
+  title: browser.i18n.getMessage("SHA512"),
   contexts: ["all"]
 }, onCreated);
 

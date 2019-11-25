@@ -4,24 +4,24 @@
     "description": "Title of context menu item that logs the selected text when clicked."
   },
 
-  "menuItemMD5": {
+  "MD5": {
     "message": "MD5",
-    "description": "Get MD5 hash of selected content"
+    "description": "Get MD5 hash"
   },
 
-  "menuItemSHA1": {
+  "SHA1": {
     "message": "SHA-1 (insecure)",
-    "description": "Get SHA-1 hash (not cryptographically secure) of selected content"
+    "description": "Get SHA-1 hash (not cryptographically secure)"
   },
 
-  "menuItemSHA256": {
+  "SHA256": {
     "message": "SHA-256",
-    "description": "Get SHA-256 hash of selected content"
+    "description": "Get SHA-256 hash"
   },
 
-  "menuItemSHA512": {
+  "SHA512": {
     "message": "SHA-512",
-    "description": "Get SHA-512 hash of selected content"
+    "description": "Get SHA-512 hash"
   },
 
   "menuItemOpenSidebar": {
