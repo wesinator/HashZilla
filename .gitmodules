@@ -1,3 +1,0 @@
-[submodule "src/crypto-api"]
-	path = src/crypto-api
-	url = https://github.com/nf404/crypto-api
