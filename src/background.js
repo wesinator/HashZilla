@@ -23,11 +23,11 @@ function onError(error) {
 /*
 Create all the context menu items.
 */
-browser.menus.create({
+/*browser.menus.create({
   id: "log-selection",
   title: browser.i18n.getMessage("menuItemSelectionLogger"),
   contexts: ["selection"]
-}, onCreated);
+}, onCreated);*/
 
 browser.menus.create({
   id: "md5",
@@ -60,12 +60,12 @@ browser.menus.create({
 }, onCreated);
 
 
-browser.menus.create({
+/*browser.menus.create({
   id: "open-sidebar",
   title: browser.i18n.getMessage("menuItemOpenSidebar"),
   contexts: ["all"],
   command: "_execute_sidebar_action"
-}, onCreated);
+}, onCreated);*/
 
 browser.menus.create({
   id: "tools-menu",
@@ -106,5 +106,8 @@ browser.menus.onClicked.addListener((info, tab) => {
       break;
   }
 
-  alert(hash);
+  if (hash) {
+      console.log(info.selectionText, hash);
+      alert(info.selectionText, hash);
+  }
 });
