@@ -1,6 +1,8 @@
 # HashZilla
 Firefox extension to get hashes of text, pages and files directly in the browser (with some limitations).
 
+Uses [crypto-api](https://github.com/nf404/crypto-api)
+
 #### Supported actions
  - Calculate hashes of selected text strings in a page
  - Calculate hashes of plaintext and other files loaded in browser
