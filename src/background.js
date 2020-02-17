@@ -8,7 +8,7 @@ function onCreated() {
   if (browser.runtime.lastError) {
     console.log(`Error: ${browser.runtime.lastError}`);
   } else {
-    console.log("Item created successfully");
+    //console.log("Item created successfully");
   }
 }
 
@@ -30,7 +30,7 @@ Create all the context menu items.
 }, onCreated);*/
 
 browser.menus.create({
-  id: "md5",
+  id: "MD5",
   title: browser.i18n.getMessage("MD5"),
   contexts: ["all"]
 }, onCreated);
@@ -42,19 +42,19 @@ browser.menus.create({
 }, onCreated);
 
 browser.menus.create({
-  id: "sha1",
+  id: "SHA1",
   title: browser.i18n.getMessage("SHA1"),
   contexts: ["all"]
 }, onCreated);
 
 browser.menus.create({
-  id: "sha256",
+  id: "SHA256",
   title: browser.i18n.getMessage("SHA256"),
   contexts: ["all"]
 }, onCreated);
 
 browser.menus.create({
-  id: "sha512",
+  id: "SHA512",
   title: browser.i18n.getMessage("SHA512"),
   contexts: ["all"]
 }, onCreated);
@@ -86,16 +86,16 @@ browser.menus.onClicked.addListener((info, tab) => {
       console.log(info.selectionText);
       break;
 
-    case "md5":
+    case "MD5":
       hash = md5(info.selectionText);
       break;
-    case "sha1":
+    case "SHA1":
       hash = sha1(info.selectionText);
       break;
-    case "sha256":
+    case "SHA256":
       hash = sha256(info.selectionText);
       break;
-    case "sha512":
+    case "SHA512":
       hash = sha512(info.selectionText);
       break;
 
@@ -109,7 +109,7 @@ browser.menus.onClicked.addListener((info, tab) => {
 
   if (hash) {
       browser.tabs.executeScript({
-          code: `console.log("${info.selectionText}", "${hashType}: ${hash}"); alert("'${info.selectionText}' ${hashType}: ${hash}");`
+          code: `console.log("'${info.selectionText}'", "${hashType}: ${hash}"); alert("'${info.selectionText}' ${hashType}: ${hash}");`
       });
   }
 });
