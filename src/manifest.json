@@ -18,7 +18,7 @@
   ],
 
   "background": {
-   "scripts": ["background.js", "hash.js", "crypto-api.min.js"]
+   "scripts": ["background.js", "hash.js", "./include/crypto-api.min.js"]
   }
 
   //"browser_action": {
