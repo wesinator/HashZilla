@@ -1,10 +1,16 @@
 # HashZilla
-Firefox extension to get hashes of text, pages and files directly in the browser (with some limitations).
+Firefox extension that provides a context menu to take the hash (MD5, SHA) of selected page text in the browser.
 
 Uses [crypto-api](https://github.com/nf404/crypto-api)
 
+### Download
+[![FF Version](https://img.shields.io/amo/v/hashzilla.svg)](https://addons.mozilla.org/addon/hashzilla/)
+
 #### Supported actions
  - Calculate hashes of selected text strings in a page
+
+### Future work
+
  - Calculate hashes of plaintext and other files loaded in browser
 
 #### Limitations
