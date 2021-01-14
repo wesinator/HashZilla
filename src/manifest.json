@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "HashZilla",
-  "description": "Get the hash of pages and files directly in the browser (with some limitations)",
+  "description": "Hash selected text and pages in the browser.",
   "homepage_url": "https://github.com/wesinator/hashzilla",
   "default_locale": "en",
   "version": "0.1.0",
@@ -11,7 +11,7 @@
 
   "permissions": [
     "menus",
-    "activeTab",
+    "tabs",
     "browserSettings",
     "search",
     "*://*/*"

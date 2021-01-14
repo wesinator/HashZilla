@@ -1,10 +1,3 @@
-/*
-First, check content type of page DOM
-this will tell us if we can accurately hash page directly,
-or need network request for accuracy
-rules found here - https://gist.github.com/wesinator/6461efb06693f69efd8faaddc862767f
-*/
-
 /*// hashing functions use https://github.com/nf404/crypto-api/tree/master/src
 import Md5 from "./crypto-api/src/hasher/md5";
 import Sha1 from "./crypto-api/src/hasher/sha1";
