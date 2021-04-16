@@ -1,7 +1,7 @@
 # HashZilla
 Firefox extension that provides a context menu to hash selected page text in the browser.
 
-Supports MD5, SHA - using [crypto-api](https://github.com/nf404/crypto-api)
+Supports MD5, SHA; using [crypto-api](https://github.com/nf404/crypto-api)
 
 ### Download
 [![FF Version](https://img.shields.io/amo/v/hashzilla.svg)](https://addons.mozilla.org/addon/hashzilla/)
@@ -31,3 +31,6 @@ I don't care about collecting your data.
 ----
 
 Generated using https://webextensions.tech/
+
+Thanks to https://github.com/mdn/webextensions-examples/blob/ec731d4ceee1df0ccdebd87ab9f95875f55eeee7/menu-demo/background.js
+for steering me in the right direction.
