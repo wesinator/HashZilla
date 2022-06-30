@@ -58,7 +58,7 @@ browser.menus.onClicked.addListener((info, tab) => {
   hashType = info.menuItemId;
   //console.log(info.selectionText);
 
-  switch (info.menuItemId) {
+  switch (hashType) {
     case "MD5":
       hash = md5(info.selectionText);
       break;
