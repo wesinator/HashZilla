@@ -80,6 +80,7 @@ ID of the menu item that was clicked.
 browser.menus.onClicked.addListener((info, tab) => {
   hash = null;
   hashType = info.menuItemId;
+  //console.log(info.selectionText);
 
   switch (info.menuItemId) {
     case "log-selection":
