@@ -1,9 +1,4 @@
 {
-  "menuItemSelectionLogger": {
-    "message": "Log '%s' to the browser console",
-    "description": "Title of context menu item that logs the selected text when clicked."
-  },
-
   "MD5": {
     "message": "MD5",
     "description": "Get MD5 hash"
@@ -22,16 +17,5 @@
   "SHA512": {
     "message": "SHA-512",
     "description": "Get SHA-512 hash"
-  },
-
-  "menuItemOpenSidebar": {
-    "message": "Open sidebar",
-    "description": "Title of context menu item that opens a sidebar."
-  },
-
-  "menuItemToolsMenu": {
-    "message": "Click me!",
-    "description": "Title of tools menu item."
   }
-
 }
