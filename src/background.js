@@ -110,7 +110,8 @@ browser.menus.onClicked.addListener((info, tab) => {
 
   if (hash) {
       browser.tabs.executeScript({
-          code: `console.log("'${info.selectionText}'", "\\n${hashType}: ${hash}");alert("'${info.selectionText}'\\n${hashType}: ${hash}");`
+          code: `hashStr = "'${info.selectionText}'\\n${hashType}: ${hash}"; 
+                 console.log(hashStr); alert(hashStr);`
       });
   }
 });
