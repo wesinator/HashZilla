@@ -109,9 +109,15 @@ browser.menus.onClicked.addListener((info, tab) => {
   }
 
   if (hash) {
+      var selectionOutput = info.selectionText.substring(0,4096);
+      if (info.selectionText.length > 4096)
+          selectionOutput = selectionOutput + "...";
+
       browser.tabs.executeScript({
-          code: `hashStr = String.raw\`'${info.selectionText}'\n${hashType}: ${hash}\`; 
-                 console.log(hashStr); alert(hashStr);`
+          code: `
+                hashStr = String.raw\`${hashType}: ${hash}\n\nText:\n'${selectionOutput}'\n\`; 
+                console.log(hashStr);
+                alert(hashStr);`
       });
   }
 });
