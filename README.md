@@ -6,6 +6,9 @@ Supports MD5, SHA; using [crypto-api](https://github.com/nf404/crypto-api)
 #### Download
 [![FF Version](https://img.shields.io/amo/v/hashzilla.svg)](https://addons.mozilla.org/addon/hashzilla/)
 
+#### _Caveat emptor_
+  - Hashes of selected multi-line text will differ between Windows and macOS/Linux hosts, because of text line-ending encoding. This is not a bug _per se_, something to be aware of.
+
 #### Privacy policy
 
 This extension doesn't collect any information whatsoever, it runs totally locally.
