@@ -4,7 +4,7 @@
   "description": "Hash selected text and pages in the browser.",
   "homepage_url": "https://github.com/wesinator/hashzilla",
   "default_locale": "en",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "icons": {
     "64": "icons/icon.png"
   },
