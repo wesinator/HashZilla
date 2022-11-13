@@ -19,7 +19,7 @@ I don't care about collecting your data.
 
 ----
 
-Generated using https://webextensions.tech/
+Generated using https://github.com/web-ext-labs/ui-tool
 
 Thanks to https://github.com/mdn/webextensions-examples/blob/ec731d4ceee1df0ccdebd87ab9f95875f55eeee7/menu-demo/background.js
 for steering me in the right direction.
