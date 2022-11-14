@@ -8,6 +8,7 @@ Supports MD5, SHA; using [crypto-api](https://github.com/nf404/crypto-api)
 
 #### _Caveat emptor_
   - Hashes of selected multi-line text will differ between Windows and macOS/Linux hosts, because of text line-ending encoding. This is not a bug _per se_, something to be aware of.
+  - Doesn't work on `raw.githubusercontent.com` page text. ([Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1411641))
 
 #### Privacy policy
 
