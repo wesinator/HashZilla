@@ -18,31 +18,31 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.menus.create({
+chrome.contextMenus.create({
   id: "MD5",
   title: browser.i18n.getMessage("MD5"),
   contexts: ["all"]
 }, onCreated);
 
-browser.menus.create({
+chrome.contextMenus.create({
   id: "separator0",
   type: "separator",
   contexts: ["all"]
 }, onCreated);
 
-browser.menus.create({
+chrome.contextMenus.create({
   id: "SHA1",
   title: browser.i18n.getMessage("SHA1"),
   contexts: ["all"]
 }, onCreated);
 
-browser.menus.create({
+chrome.contextMenus.create({
   id: "SHA256",
   title: browser.i18n.getMessage("SHA256"),
   contexts: ["all"]
 }, onCreated);
 
-browser.menus.create({
+chrome.contextMenus.create({
   id: "SHA512",
   title: browser.i18n.getMessage("SHA512"),
   contexts: ["all"]
@@ -53,7 +53,7 @@ browser.menus.create({
 The click event listener, where we perform the appropriate action given the
 ID of the menu item that was clicked.
 */
-browser.menus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener((info, tab) => {
   hash = null;
   hashType = info.menuItemId;
   //console.log(info.selectionText);
