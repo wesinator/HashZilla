@@ -80,7 +80,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
       browser.tabs.executeScript({
           code: `
-                hashStr = String.raw\`${hashType}: ${hash}\n\nText:\n'${selectionOutput}'\n\`; 
+                hashStr = String.raw\`${hashType}: ${hash}\n\n${browser.i18n.getMessage("TextHeading")}\n'${selectionOutput}'\n\`; 
                 console.log(hashStr);
                 alert(hashStr);`
       });

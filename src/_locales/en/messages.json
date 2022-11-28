@@ -3,19 +3,21 @@
     "message": "MD5",
     "description": "Get MD5 hash"
   },
-
   "SHA1": {
     "message": "SHA-1 (insecure)",
     "description": "Get SHA-1 hash (not cryptographically secure)"
   },
-
   "SHA256": {
     "message": "SHA-256",
     "description": "Get SHA-256 hash"
   },
-
   "SHA512": {
     "message": "SHA-512",
     "description": "Get SHA-512 hash"
+  },
+
+  "TextHeading": {
+    "message": "Text:",
+    "description": "Text heading displayed in hash output, to show the original selected text."
   }
 }
