@@ -13,6 +13,12 @@
     "contextMenus",
     "activeTab"
   ],
+  "browser_specific_settings": {
+      "gecko": {
+          "id": "hashzilla@wesinator.github.com",
+          "strict_max_version": "109.*"
+      }
+  },
 
   "background": {
    "scripts": ["background.js", "hash.js", "./include/crypto-api.min.js"]
