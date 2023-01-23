@@ -49,33 +49,41 @@ ID of the menu item that was clicked.
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   hash = null;
   hashType = info.menuItemId;
-  //console.log(info.selectionText);
+  hashtext = info.selectionText;
+  //console.log("selection:",info.selectionText);
 
   switch (hashType) {
     case "MD5":
-      hash = md5(info.selectionText);
+      hash = md5(hashtext);
       break;
     case "SHA1":
-      hash = sha1(info.selectionText);
+      hash = sha1(hashtext);
       break;
     case "SHA256":
-      hash = sha256(info.selectionText);
+      hash = sha256(hashtext);
       break;
     case "SHA512":
-      hash = sha512(info.selectionText);
+      hash = sha512(hashtext);
       break;
   }
 
   if (hash) {
-      var selectionOutput = info.selectionText.substring(0,4096);
-      if (info.selectionText.length > 4096)
-          selectionOutput = selectionOutput + "...";
-
-      browser.tabs.executeScript({
-          code: `
-                hashStr = String.raw\`${hashType}: ${hash}\n\n${browser.i18n.getMessage("TextHeading")}\n'${selectionOutput}'\n\`; 
-                console.log(hashStr);
-                alert(hashStr);`
+      //console.log(hash)
+      chrome.scripting.executeScript({
+          target: {tabId: tab.id},
+          func: displayHash,
+          args: [hashtext, hashType, hash]
       });
   }
 });
+
+function displayHash(hashText, hashType, hash) {
+    // truncate long text String
+    var selectionOutput = hashText.substring(0,4096);
+      if (hashText.length > 4096)
+          selectionOutput = selectionOutput + "...";
+
+    hashStr = `${hashType.toUpperCase()}: ${hash}\n\n${chrome.i18n.getMessage("TextHeading")}\n'${selectionOutput}'\n`; 
+    console.log(hashStr);
+    alert(hashStr);
+}
