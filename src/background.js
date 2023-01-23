@@ -10,13 +10,6 @@ function onCreated() {
   }
 }
 
-/*
-Called when there was an error.
-We'll just log the error here.
-*/
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
 
 chrome.contextMenus.create({
   id: "MD5",
