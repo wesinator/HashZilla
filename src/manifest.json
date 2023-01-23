@@ -1,29 +1,25 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "HashZilla",
   "description": "Hash selected text in the browser.",
   "homepage_url": "https://github.com/wesinator/hashzilla",
   "default_locale": "en",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "icons": {
     "64": "icons/icon.png"
   },
-
   "permissions": [
     "contextMenus",
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
+  "browser_specific_settings": {
+      "gecko": {
+          "id": "{0da3d4d4-91e1-4ccd-ba19-4e57c36d289b}"
+      }
+  },
 
   "background": {
-   "scripts": ["background.js", "hash.js", "./include/crypto-api.min.js"]
+    "scripts": ["background.js", "hash.js", "./include/crypto-api.min.js"]
   }
-
-  //"browser_action": {
-    //"default_icon": {
-      //"64": "icons/icon.png"
-    //},
-    //"default_popup": "browserAction/index.html",
-    //"default_title": "HashZilla"
-  //}
-
 }
