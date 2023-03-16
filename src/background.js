@@ -3,44 +3,44 @@ Called when the item has been created, or when creation failed due to an error.
 We'll just log success/failure here.
 */
 function onCreated() {
-  if (chrome.runtime.lastError) {
-    console.log(`Error: ${chrome.runtime.lastError}`);
+  if (browser.runtime.lastError) {
+    console.log(`Error: ${browser.runtime.lastError}`);
   } else {
     //console.log("Item created successfully");
   }
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.contextMenus.create({
-      id: "MD5",
-      title: chrome.i18n.getMessage("MD5"),
-      contexts: ["all"]
-    }, onCreated);
 
-    chrome.contextMenus.create({
-      id: "separator0",
-      type: "separator",
-      contexts: ["all"]
-    }, onCreated);
+chrome.contextMenus.create({
+  id: "MD5",
+  title: browser.i18n.getMessage("MD5"),
+  contexts: ["all"]
+}, onCreated);
 
-    chrome.contextMenus.create({
-      id: "SHA1",
-      title: chrome.i18n.getMessage("SHA1"),
-      contexts: ["all"]
-    }, onCreated);
+chrome.contextMenus.create({
+  id: "separator0",
+  type: "separator",
+  contexts: ["all"]
+}, onCreated);
 
-    chrome.contextMenus.create({
-      id: "SHA256",
-      title: chrome.i18n.getMessage("SHA256"),
-      contexts: ["all"]
-    }, onCreated);
+chrome.contextMenus.create({
+  id: "SHA1",
+  title: browser.i18n.getMessage("SHA1"),
+  contexts: ["all"]
+}, onCreated);
 
-    chrome.contextMenus.create({
-      id: "SHA512",
-      title: chrome.i18n.getMessage("SHA512"),
-      contexts: ["all"]
-    }, onCreated);
-});
+chrome.contextMenus.create({
+  id: "SHA256",
+  title: browser.i18n.getMessage("SHA256"),
+  contexts: ["all"]
+}, onCreated);
+
+chrome.contextMenus.create({
+  id: "SHA512",
+  title: browser.i18n.getMessage("SHA512"),
+  contexts: ["all"]
+}, onCreated);
+
 
 /*
 The click event listener, where we perform the appropriate action given the
